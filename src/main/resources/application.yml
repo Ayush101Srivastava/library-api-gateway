@@ -1,0 +1,15 @@
+server:
+  port: 6009
+spring:
+  application:
+    name: gateway-service  
+  cloud:
+    gateway:
+      routes:
+      - id: library-service
+        uri: http://library-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*'
